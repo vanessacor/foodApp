@@ -1,0 +1,16 @@
+.button-basket {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-color: #FF6900;
+    box-shadow: 5px 6px 10px #757575;
+    color: #fafafa;
+    border: none;
+
+}
+
+.button-basket ion-icon {
+    margin: 0 auto;
+    width: 2em;
+    height: 2em;
+}
