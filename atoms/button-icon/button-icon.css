@@ -1,4 +1,4 @@
-.button-home {
+.button-icon {
     background-color: transparent;
     color: #c1c1c1;
     border: none;
@@ -7,7 +7,7 @@
 
 }
 
-.button-home ion-icon {
+.button-icon ion-icon {
     width: 2em;
     height: 2em;
 }
