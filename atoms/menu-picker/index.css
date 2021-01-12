@@ -1,0 +1,15 @@
+.menu-picker {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100px;
+    
+}
+.menu-picker input, button {
+    width: 80%;
+    font-size: 20px;
+}
+
+.menu-picker input {
+    width: 80%;
+    font-weight: bolder;
+}

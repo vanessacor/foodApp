@@ -1,0 +1,18 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer .button-icon {
+    background-color: transparent;
+    color: #c1c1c1;
+    border: none;
+    
+
+}
+
+.footer .button-icon ion-icon {
+    width: 2em;
+    height: 2em;
+}

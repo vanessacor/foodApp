@@ -1,0 +1,12 @@
+/* Typography */
+
+body {
+  font-family:"Raleway", sans-serif ;
+  font-size: 16px;
+  color: #292929;
+}
+
+body p {
+  font-size: 1rem;
+  color: #b4b4b4;
+}
