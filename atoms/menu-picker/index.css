@@ -1,15 +1,28 @@
 .menu-picker {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
     width: 100px;
     
 }
 .menu-picker input, button {
     width: 80%;
     font-size: 20px;
+    border: none;
+    border-radius: 5px;
 }
 
 .menu-picker input {
-    width: 80%;
-    font-weight: bolder;
+    display: block;
+    margin-right: 2px;
+    padding: 8px;
+    font-weight: bold;
+    background-color: #cecbcb;
+
+}
+
+.menu-picker button {
+    padding: 10px;
+    background-color: transparent;
+    color: #b4b4b4;
 }

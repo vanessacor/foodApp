@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+.item-card {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.item-card img:first-child {
+  grid-area: 1/1;
+}
+
+.item-photo {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.item-details {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+}
+
+.item-details > * {
+  margin: 0 0 10px 0;
+}
+
+.item-price {
+  color: #ff6900;
+}
+
+.item-options {
+  color: #b3b1b1;
+}
+
+.item-picker {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 100px;
+}
+
+.item-picker input,
+button {
+  width: 80%;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.item-picker input {
+  display: block;
+  margin-right: 2px;
+  padding: 8px;
+  font-weight: bold;
+  background-color: #cecbcb;
+}
+
+.item-picker button {
+  padding: 10px;
+  background-color: transparent;
+  color: #b4b4b4;
+}
