@@ -1,36 +1,6 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-}
-
-/* Typography */
-
-body {
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  color: #292929;
-}
-
-body p {
-  font-size: 1rem;
-  color: #b4b4b4;
-}
-
-.container {
-  margin: 0 15px;
-}
-
 main {
   overflow-y: auto;
+  position: relative;
 }
 
 .app-header {
@@ -126,14 +96,10 @@ main {
   width: 100px;
 }
 
-.item-picker input {
+.item-picker input,
+button {
   width: 80%;
-  border: none;
-  border-radius: 5px;
-}
-
-.item-picker button {
-  width: 80%;
+  font-size: 20px;
   border: none;
   border-radius: 5px;
 }
@@ -141,11 +107,11 @@ main {
 .item-picker input {
   display: block;
   margin-right: 2px;
-  font-size: 1rem;
+  padding: 8px;
   font-weight: bold;
   background-color: #cecbcb;
-  /* -webkit-appearance: none;
-   -moz-appearance: textfield; */
+  -webkit-appearance: none;
+   -moz-appearance: textfield;
 }
 
 .item-picker button {
@@ -156,24 +122,23 @@ main {
 
 .button-basket {
   position: absolute;
-  bottom: 34px;
+  bottom: 20px;
   width: 4em;
   height: 4em;
   border-radius: 50%;
   background-color: #ff6900;
   box-shadow: 5px 6px 10px #757575;
+  color: #fafafa;
   border: none;
 }
 
 .button-basket ion-icon {
-  color: #fafafa;
   margin: 0 auto;
   width: 2em;
   height: 2em;
 }
 
 .footer {
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -186,16 +151,16 @@ main {
   box-shadow: 0px -8px 12px rgb(185 185 185 / 75%);
 }
 
-.button-icon {
+.footer .button-icon {
   background-color: transparent;
   color: #c1c1c1;
   border: none;
 }
-.button-icon:active {
+.footer .button-icon:active {
   color: #ff6900;
 }
 
-.button-icon ion-icon {
+.footer .button-icon ion-icon {
   width: 2em;
   height: 2em;
 }

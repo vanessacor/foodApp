@@ -1,0 +1,23 @@
+{
+  "name": "food-app",
+  "version": "1.0.0",
+  "description": "A app to serve a menu for restaurants who during this time of covid have to provide takeway service in order to stay in bussiness.",
+  "main": "index.js",
+  "dependencies": {
+    "jasmine": "^3.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanessacor/foodApp.git"
+  },
+  "author": "vanessa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanessacor/foodApp/issues"
+  },
+  "homepage": "https://github.com/vanessacor/foodApp#readme"
+}

@@ -1,0 +1,37 @@
+.basket {
+  padding-top: 20px;
+}
+
+.basket-order {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ff6900;
+  box-shadow: 0px -8px 12px rgb(185 185 185 / 75%);
+}
+
+.basket-order ul {
+  margin: 0;
+  list-style: none;
+}
+.order-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-details p {
+  color: white;
+}
+
+.order-total p {
+  font-weight: bolder;
+}
+
+.order-button {
+  width: 70%;
+  margin: 0 15%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fafafa;
+  color: #292929;
+}
