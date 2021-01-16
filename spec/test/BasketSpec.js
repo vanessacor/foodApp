@@ -11,7 +11,7 @@ describe("Basket", function () {
 
     describe("when add a product", function () {
       beforeEach(function () {
-        const product = new Product("paella", "9€", "Seafood Rice", "url");
+        const product = new Product("paella", 9, "Seafood Rice", "url");
         this.basket.addProduct(product);
       });
       it("should contain one product", function () {
@@ -20,7 +20,7 @@ describe("Basket", function () {
       });
       it("should add the price to the total", function () {
         const total = this.basket.getTotal();
-        expect(total).toEqual("9€");
+        expect(total).toEqual("€9.00");
       });
     });
   });

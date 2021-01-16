@@ -7,6 +7,7 @@ class Product {
     this.description = description;
     this.image = image;
   }
+  
 
 }
 

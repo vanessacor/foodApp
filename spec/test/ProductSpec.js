@@ -5,7 +5,7 @@ const Product = require("../../scripts/product");
 describe("Product", function () {
   describe("when I create a product", function () {
     beforeEach(function () {
-      this.product = new Product("paella", "9€", "Seafood Rice", "url");
+      this.product = new Product("paella", 9, "Seafood Rice", "url");
     });
 
     it("should contain the correct title", function () {
@@ -13,7 +13,7 @@ describe("Product", function () {
     });
 
     it("should contain the correct price", function () {
-      expect(this.product.price).toEqual("9€");
+      expect(this.product.price).toEqual(9);
     });
 
     it("should contain the correct description", function () {
