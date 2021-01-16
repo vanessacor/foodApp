@@ -1,12 +1,13 @@
 "use strict";
 
 class Product {
-  constructor(title, price, description, quantity = 0) {
+  constructor(title, price, description, image) {
     this.title = title;
     this.price = price;
     this.description = description;
-    this.quantity = quantity;
+    this.image = image;
   }
+
 }
 
 if (typeof module !== "undefined") {
