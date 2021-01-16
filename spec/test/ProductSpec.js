@@ -1,15 +1,27 @@
-describe("Given an", function () {
-    
-    it("should return a new product", function () {
-      const product = new Product("Paella", "9€", "Sea food rise");
-  
-      expect(product.name).toEqual("Paella");
-      expect(product.price).toEqual("9 euros");
-      expect(product.quantity).toEqual(1);
-      expect(product.description).toEqual("Sea food rice");
-      
+"use strict";
 
+const Product = require("../../scripts/product");
 
+describe("Product", function () {
+  describe("when I create a product", function () {
+    beforeEach(function () {
+      this.product = new Product("paella", "9€", "Seafood Rice");
     });
-   
+
+    it("should contain the correct title", function () {
+      expect(this.product.title).toEqual("paella");
+    });
+
+    it("should contain the correct price", function () {
+      expect(this.product.price).toEqual("9€");
+    });
+
+    it("should contain the correct description", function () {
+      expect(this.product.description).toEqual("Seafood Rice");
+    });
+
+    it("should contain the selected quantity", function () {
+      expect(this.product.quantity).toEqual(0);
+    });
   });
+});
