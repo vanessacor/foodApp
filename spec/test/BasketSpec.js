@@ -11,16 +11,24 @@ describe("Basket", function () {
 
     describe("when add a product", function () {
       beforeEach(function () {
-        const product = new Product("paella", 9, "Seafood Rice", "url");
+        const product = new Product("paella", 30, "Seafood Rice", "url");
         this.basket.addProduct(product);
       });
       it("should contain one product", function () {
         const result = this.basket.getQuantity();
         expect(result).toEqual(1);
       });
-      it("should add the price to the total", function () {
-        const total = this.basket.getTotal();
-        expect(total).toEqual("€9.00");
+      it("should add the price to the subtotal", function () {
+        const total = this.basket.subTotal;
+        expect(total).toEqual(30);
+      });
+      it("should calculate the fees of the subTotal", function () {
+        const total = this.basket.fees;
+        expect(total).toEqual(3);
+      });
+      it("should calculate the total to pay in the basket", function () {
+        const total = this.basket.total;
+        expect(total).toEqual(3);
       });
     });
   });
