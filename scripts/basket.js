@@ -3,18 +3,28 @@ class Basket {
     this.products = [];
     this.fees = 0;
     this.SubTotal = 0;
-    this.quantity = 0;
+    this.generateId = 1
   }
 
   addProduct(product) {
+    product.id = this.generateId++
     this.products.push(product);
-    this.quantity++;
     this.getSubTotal();
     this.getFees();
+    this.getTotal();
+  }
+
+  removeProduct(id) {
+    const productIndex = this.products.findIndex(item => item.id === id)
+    this.products.splice(productIndex, 1)
+    this.getSubTotal();
+    this.getFees();
+    this.getTotal()
   }
 
   getQuantity() {
-    return this.quantity;
+    const quantity = this.products.length;
+    return quantity;
   }
 
   getSubTotal() {
@@ -30,12 +40,11 @@ class Basket {
     const fees = this.subTotal * feePercentage;
     return this.fees = fees;
   }
-  // formatCurrency(price) {
-  //   return new Intl.NumberFormat("de-DE", {
-  //     style: "currency",
-  //     currency: "EUR",
-  //   }).format(price);
-  // }
+
+  getTotal() {
+    return this.total = this.subTotal + this.fees;
+  }
+  
 }
 
 if (typeof module !== "undefined") {
