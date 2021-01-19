@@ -3,11 +3,12 @@
 let categories = [];
 
 class MenuUi {
-  constructor(basket, parent, products) {
+  constructor(basket, parent, products, basketUi) {
     this.basket = basket;
     this.menuList = parent;
     this.productList = products;
-    this.printProductList();
+    this.renderProductList();
+    this.basketUi = basketUi;
   }
 
   renderProductCard(product) {
@@ -34,6 +35,7 @@ class MenuUi {
     const addBtn = productCard.querySelector(".add-product");
     addBtn.addEventListener("click", () => {
       this.addProduct(product);
+      this.basketUi.renderBasket()
     });
 
     const removeBtn = productCard.querySelector(".remove-product");

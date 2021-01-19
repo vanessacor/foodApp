@@ -38,8 +38,9 @@ let products = [
 function main() {
   const basket = new Basket();
   const menuParent = document.querySelector(".restaurant-menu");
-  const menuUi = new MenuUi(basket, menuParent, products);
-  const basketUi = new basketUi(basketUi,basketParent)
+  const basketParent = document.querySelector(".basket-order")
+  const basketUi = new BasketUi(basket,basketParent)
+  const menuUi = new MenuUi(basket, menuParent, products, basketUi);
 }
 
 window.addEventListener("load", main);
