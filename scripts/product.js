@@ -1,10 +1,12 @@
 "use strict";
 
 class Product {
-  constructor(title, price, description, image) {
+  constructor(id, title, price, description, category, image) {
+    this.id = id
     this.title = title;
     this.price = price;
     this.description = description;
+    this.category = category
     this.image = image;
   }
   

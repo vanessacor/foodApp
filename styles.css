@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
+
 html {
   box-sizing: border-box;
 }
@@ -83,25 +85,37 @@ main {
   font-size: 0.8rem;
 }
 
+.restaurant-menu {
+  overflow-y: scroll;
+  margin-bottom: 60px;
+}
 .item-card {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 160px auto;
+  grid-template-rows: 160px;
   gap: 20px;
   justify-items: center;
   align-items: center;
   margin-bottom: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.item-card img:first-child {
+.item-card .item-photo-wrapper {
   grid-area: 1/1;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .item-photo {
-  border-radius: 20px;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .item-details {
+  width: 100%;
   margin: 0;
   font-family: "Raleway", sans-serif;
   font-weight: bolder;
@@ -117,6 +131,8 @@ main {
 
 .item-options {
   color: #b3b1b1;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .item-picker {
@@ -138,7 +154,7 @@ main {
   border-radius: 5px;
 }
 
-.item-picker input {
+.item-picker p {
   display: block;
   margin-right: 2px;
   font-size: 1rem;

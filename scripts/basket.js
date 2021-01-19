@@ -1,50 +1,58 @@
 class Basket {
   constructor() {
     this.products = [];
-    this.fees = 0;
-    this.SubTotal = 0;
-    this.generateId = 1
   }
 
   addProduct(product) {
-    product.id = this.generateId++
-    this.products.push(product);
-    this.getSubTotal();
-    this.getFees();
-    this.getTotal();
+    const item = this.products.find((item) => item.product.id === product.id);
+    if (item) {
+      item.quantity++;
+      return item
+    } else {
+      const productItem = {quantity: 1, product}
+      this.products.push(productItem);
+      return  productItem;  
+    }
   }
 
-  removeProduct(id) {
-    const productIndex = this.products.findIndex(item => item.id === id)
-    this.products.splice(productIndex, 1)
-    this.getSubTotal();
-    this.getFees();
-    this.getTotal()
+  removeProduct(product) {
+    const item = this.products.find((item) => item.product.id === product.id);
+    if (item.quantity > 1) {
+      item.quantity-- 
+      return item;
+    } else {
+      const productIndex = this.products.findIndex((item) => item.product.id === product.id);
+      this.products.splice(productIndex, 1);
+    }
   }
 
-  getQuantity() {
+  getItemQuantity(product) {
+    const item = this.products.find((item) => item.product.id === product.id);
+    return item.quantity;
+  }
+
+  get productCount() {
     const quantity = this.products.length;
     return quantity;
   }
 
-  getSubTotal() {
+  get subTotal() {
     const total = this.products.reduce(
-      (accumulator, currentValue) => accumulator + currentValue.price,
+      (acc, item) => acc + item.product.price * item.quantity,
       0
     );
-    return this.subTotal = total;
+    return total;
   }
 
-  getFees() {
-    const feePercentage = .10
+  get fees() {
+    const feePercentage = 0.1;
     const fees = this.subTotal * feePercentage;
-    return this.fees = fees;
+    return fees;
   }
 
-  getTotal() {
-    return this.total = this.subTotal + this.fees;
+  get total() {
+    return this.subTotal + this.fees;
   }
-  
 }
 
 if (typeof module !== "undefined") {
