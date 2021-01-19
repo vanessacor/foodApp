@@ -35,7 +35,6 @@ class MenuUi {
     const addBtn = productCard.querySelector(".add-product");
     addBtn.addEventListener("click", () => {
       this.addProduct(product);
-      this.basketUi.renderBasket()
     });
 
     const removeBtn = productCard.querySelector(".remove-product");
@@ -64,19 +63,21 @@ class MenuUi {
   addProduct(product) {
     const item = this.basket.addProduct(product);
     this.updateQuantity(item.quantity, item.product.id);
+    this.basketUi.renderBasket();
   }
 
   removeProduct(product) {
     const item = this.basket.removeProduct(product);
     if (!item) {
-      this.updateQuantity(0, product.id)
-      return
+      this.updateQuantity(0, product.id);
+      this.basketUi.renderBasket();
+      return;
     }
+    this.basketUi.renderBasket();
     this.updateQuantity(item.quantity, item.product.id);
   }
 
   updateQuantity(quantity, id) {
-     document.querySelector(`#quantity-${id}`).innerHTML = quantity;
+    document.querySelector(`#quantity-${id}`).innerHTML = quantity;
   }
-
 }
