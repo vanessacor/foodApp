@@ -40,8 +40,17 @@ class BasketUi {
         </ul>
       <button class="order-button">Send Order</button>
       </section>`;
-    return (this.parent.innerHTML = html);
-    //   const orderBtn = document.querySelector("order-button")
-    //   orderBtn.addEventListener()
+    this.parent.innerHTML = html;
+    const orderBtn = document.querySelector(".order-button");
+    orderBtn.addEventListener("click", () => {
+        this.processCheckout();
+      });
+    return this.parent.innerHTML;
+  }
+
+  processCheckout() {
+      const message = `Your order: fees= ${this.basket.total}, total=${this.basket.total}`
+      window.open(`https://api.whatsapp.com/send?phone=+*YOURNUMBER&text=%20 + ${message}`)
+      console.log(message)
   }
 }
