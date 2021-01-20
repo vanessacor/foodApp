@@ -1,26 +1,33 @@
-'use strict'
+"use strict";
 
 class BasketUi {
-    constructor(basket, parent) {
-        this.basket = basket,
-        this.parent = parent
-        this.renderBasket()
-    }
+  constructor(basket, parent) {
+    (this.basket = basket), (this.parent = parent);
+    this.renderBasket();
+  }
 
-    renderBasket() {
-        const html = `
-        <button class="button-basket">
-          <ion-icon name="bag-outline"></ion-icon>
-        </button>
+  formatCurrency(number) {
+    const price = new Intl.NumberFormat("de-DE", {
+      style: "currency",
+      currency: "EUR",
+    }).format(number);
+    return price;
+  }
+  renderBasket() {
+    let { subTotal, fees, total } = this.basket;
+    subTotal = this.formatCurrency(subTotal);
+    fees = this.formatCurrency(fees);
+    total = this.formatCurrency(total);
+    const html = `
         <section id="order-details">
             <ul >
             <li class="order-details">
             <p>Subtotal</p>
-            <p>${this.basket.subTotal}</p>
+            <p>${subTotal}</p>
             </li>
             <li class="order-details">
             <p>IVA</p>
-            <p>${this.basket.fees}</p>
+            <p>${fees}</p>
             </li>
             <li class="order-details">
             <p>Delivery Fee</p>
@@ -28,13 +35,13 @@ class BasketUi {
             </li>
             <li class="order-details order-total">
             <p>TOTAL</p>
-            <p>${this.basket.total}</p>
+            <p>${total}</p>
             </li>
         </ul>
       <button class="order-button">Send Order</button>
-      </section>`
-     return this.parent.innerHTML = html
+      </section>`;
+    return (this.parent.innerHTML = html);
     //   const orderBtn = document.querySelector("order-button")
- //   orderBtn.addEventListener()
-    }
+    //   orderBtn.addEventListener()
+  }
 }
