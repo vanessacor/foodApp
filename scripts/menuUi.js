@@ -21,8 +21,8 @@ class MenuUi {
               <img class="item-photo" src="${product.image}" alt="" />
             </div>
             <div class="item-details">
-              <h3 class="item-price">${productPrice}</h3>
-              <h3 class="item-title">${product.title}</h3>
+              <h4 class="item-price">${productPrice}</h4>
+              <h4 class="item-title">${product.title}</h4>
               <p class="item-options">${product.description}</p>
               <div class="item-picker" id=${id}>
                 <button class="remove-product" >-</button>

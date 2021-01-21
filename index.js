@@ -35,6 +35,18 @@ let products = [
   ),
 ];
 
+
+const showBasketBtn = document.querySelector('.button-basket')
+showBasketBtn.addEventListener('click', showBasket)
+
+function showBasket() {
+  const basket = document.querySelector('.basket-order')
+  basket.classList.remove('basket-hidden');
+  showBasketBtn.className ='button-basket-show'
+  basket.classList.add('basket-show');
+  
+}
+
 function main() {
   const basket = new Basket();
   const menuParent = document.querySelector(".restaurant-menu");
