@@ -35,22 +35,10 @@ let products = [
   ),
 ];
 
-
-const showBasketBtn = document.querySelector('.button-basket')
-showBasketBtn.addEventListener('click', showBasket)
-
-function showBasket() {
-  const basket = document.querySelector('.basket-order')
-  basket.classList.remove('basket-hidden');
-  showBasketBtn.className ='button-basket-show'
-  basket.classList.add('basket-show');
-  
-}
-
 function main() {
   const basket = new Basket();
   const menuParent = document.querySelector(".restaurant-menu");
-  const basketParent = document.querySelector(".basket-order")
+  const basketParent = document.querySelector(".basket")
   const basketUi = new BasketUi(basket,basketParent)
   const menuUi = new MenuUi(basket, menuParent, products, basketUi);
 }

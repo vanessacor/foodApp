@@ -194,7 +194,7 @@ main {
 .button-basket-show {
   position: absolute;
   bottom: 254px;
-  z-index: 2;
+  z-index: 2; 
   left: 44%;
   width: 4em;
   height: 4em;
@@ -225,6 +225,7 @@ main {
 
 .basket {
   padding-top: 20px;
+  width: 100%;
 }
 
 .basket-order {
