@@ -18,7 +18,7 @@ class MenuUi {
     const productPrice = this.formatCurrency(product.price);
     productCard.innerHTML = ` 
             <div class="item-photo-wrapper">
-              <img class="item-photo" src="${product.image}" alt="" />
+              <img class="item-photo" src="${product.image}" alt="${product.title}" />
             </div>
             <div class="item-details">
               <h4 class="item-price">${productPrice}</h4>

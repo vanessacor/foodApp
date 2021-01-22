@@ -4,6 +4,10 @@ html {
   box-sizing: border-box;
 }
 
+:root {
+  --font-color: #b4b4b4;
+}
+
 *,
 *:before,
 *:after {
@@ -24,7 +28,7 @@ body {
 
 body p {
   font-size: 1rem;
-  color: #b4b4b4;
+  color: var(--font-color);
 }
 
 .container {
@@ -194,7 +198,7 @@ main {
 .button-basket-show {
   position: absolute;
   bottom: 254px;
-  z-index: 2; 
+  z-index: 2;
   left: 44%;
   width: 4em;
   height: 4em;
@@ -207,7 +211,6 @@ main {
 .button-basket-show:focus {
   outline: none;
 }
-
 
 .button-basket ion-icon {
   color: #fafafa;
@@ -265,7 +268,7 @@ main {
   font-weight: bolder;
 }
 
-.order-button {
+.send-order {
   width: 70%;
   margin: 0 15%;
   border: none;
@@ -274,8 +277,6 @@ main {
   background-color: #fafafa;
   color: #292929;
 }
-
-
 
 .footer {
   display: flex;
@@ -290,6 +291,11 @@ main {
   box-shadow: 0px -8px 12px rgb(185 185 185 / 75%);
 }
 
+.footer-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
 .button-icon {
   background-color: transparent;
   color: #c1c1c1;

@@ -2,7 +2,9 @@
 
 class BasketUi {
   constructor(basket, parent) {
-    (this.basket = basket), (this.parent = parent), (this.isBasketShown = false );
+    (this.basket = basket),
+      (this.parent = parent),
+      (this.isBasketShown = false);
     this.renderBasket();
   }
 
@@ -42,17 +44,17 @@ class BasketUi {
                   <p>${total}</p>
                   </li>
               </ul>
-              <button class="order-button">Send Order</button>
+              <button class="send-order">Send Order</button>
       </section>`;
     this.parent.innerHTML = html;
-    const orderBtn = document.querySelector(".order-button");
+    const orderBtn = document.querySelector(".send-order");
     orderBtn.addEventListener("click", () => {
       this.processCheckout();
     });
     const showBasketBtn = document.querySelector(".button-basket");
     showBasketBtn.addEventListener("click", () => {
       this.toggleBasket(showBasketBtn);
-    })
+    });
     return this.parent.innerHTML;
   }
 
@@ -69,7 +71,7 @@ class BasketUi {
     button.className = "button-basket-show";
     basket.classList.add("basket-show");
     this.isBasketShown = false;
-    this.renderBasket()
+    this.renderBasket();
   }
 
   showBasket = (button) => {
@@ -78,7 +80,7 @@ class BasketUi {
     button.className = "button-basket-show";
     basket.classList.add("basket-show");
     this.isBasketShown = true;
-  }
+  };
   processCheckout() {
     const message = `Your order: fees= ${this.basket.total}, total=${this.basket.total}`;
     window.open(
