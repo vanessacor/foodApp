@@ -1,16 +1,48 @@
+
 .button-basket {
+    position: absolute;
+    bottom: 34px;
+    left: 44%;
+    z-index: 1;
     width: 4em;
     height: 4em;
     border-radius: 50%;
-    background-color: #FF6900;
+    background-color: #ff6900;
     box-shadow: 5px 6px 10px #757575;
-    color: #fafafa;
     border: none;
-
-}
-
-.button-basket ion-icon {
+  }
+  
+  .button-basket:focus {
+    outline: none;
+  }
+  
+  .button-basket-show {
+    position: absolute;
+    bottom: 254px;
+    z-index: 2;
+    left: 44%;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-color: #ff6900;
+    box-shadow: 5px 6px 10px #757575;
+    border: none;
+  }
+  
+  .button-basket-show:focus {
+    outline: none;
+  }
+  
+  .button-basket ion-icon {
+    color: #fafafa;
     margin: 0 auto;
     width: 2em;
     height: 2em;
-}
+  }
+  
+  .button-basket-show ion-icon {
+    color: #fafafa;
+    margin: 0 auto;
+    width: 2em;
+    height: 2em;
+  }

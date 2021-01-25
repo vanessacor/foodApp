@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px -8px 12px rgb(185 185 185 / 75%);
+  }
+  
+  .footer-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+  .button-icon {
+    background-color: transparent;
+    color: #c1c1c1;
+    border: none;
+  }
+  .button-icon:active {
+    color: #ff6900;
+  }
+  
+  .button-icon ion-icon {
+    width: 2em;
+    height: 2em;
+  }

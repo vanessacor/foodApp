@@ -1,12 +1,27 @@
+
 .basket {
   padding-top: 20px;
+  width: 100%;
 }
 
 .basket-order {
   padding: 10px;
+  width: 100%;
   border-radius: 10px;
   background-color: #ff6900;
   box-shadow: 0px -8px 12px rgb(185 185 185 / 75%);
+}
+
+.basket-show {
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  z-index: 1;
+}
+
+.basket-hidden {
+  display: none;
 }
 
 .basket-order ul {
