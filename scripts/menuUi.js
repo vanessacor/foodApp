@@ -7,8 +7,8 @@ class MenuUi {
     this.basket = basket;
     this.menuList = parent;
     this.productList = products;
-    this.renderProductList();
     this.basketUi = basketUi;
+    this.renderProductList();
   }
 
   renderProductCard(product) {
