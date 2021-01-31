@@ -83,8 +83,6 @@ class BasketUi {
   };
   processCheckout() {
     const message = `Your order: fees= ${this.basket.total}, total=${this.basket.total}`;
-    window.open(
-      `https://api.whatsapp.com/send?phone=+*YOURNUMBER&text=%20 + ${message}`
-    );
+    window.open(`https://wa.me/341112222333?text=${message}`);
   }
 }

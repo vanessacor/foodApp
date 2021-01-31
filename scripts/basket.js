@@ -28,6 +28,10 @@ class Basket {
 
   getItemQuantity(product) {
     const item = this.products.find((item) => item.product.id === product.id);
+    if (item === undefined){
+      const quantity = 0
+      return quantity;
+    }
     return item.quantity;
   }
 

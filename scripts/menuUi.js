@@ -1,19 +1,20 @@
 "use strict";
 
-let categories = [];
-
 class MenuUi {
   constructor(basket, parent, products, basketUi) {
     this.basket = basket;
     this.menuList = parent;
     this.productList = products;
     this.basketUi = basketUi;
+    this.isFiltered = false;
+    this.category;
     this.renderProductList();
   }
 
   renderProductCard(product) {
     const productCard = document.createElement("article");
     const id = product.id;
+    const quantity = this.basket.getItemQuantity(product);
     productCard.setAttribute("class", "item-card");
     const productPrice = this.formatCurrency(product.price);
     productCard.innerHTML = ` 
@@ -26,7 +27,7 @@ class MenuUi {
               <p class="item-options">${product.description}</p>
               <div class="item-picker" id=${id}>
                 <button class="remove-product" >-</button>
-                <p id=quantity-${id}>0</p>
+                <p id=quantity-${id}>${quantity}</p>
                 <button class="add-product">+</button>
               </div>
             </div>
@@ -54,7 +55,11 @@ class MenuUi {
   }
 
   renderProductList() {
-    this.productList.forEach((product) => {
+    this.menuList.innerHTML = "";
+    const productList = this.productList.filter(
+      (product) => product.category === this.category || !this.isFiltered
+    );
+    productList.forEach((product) => {
       const card = this.renderProductCard(product);
       this.menuList.appendChild(card);
     });
@@ -79,5 +84,11 @@ class MenuUi {
 
   updateQuantity(quantity, id) {
     document.querySelector(`#quantity-${id}`).innerHTML = quantity;
+  }
+
+  filterProduct(filter) {
+    this.isFiltered = true;
+    this.category = filter;
+    this.renderProductList();
   }
 }

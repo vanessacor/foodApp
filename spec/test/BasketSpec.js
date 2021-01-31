@@ -8,6 +8,16 @@ describe("Basket", function () {
     beforeEach(function () {
       this.basket = new Basket();
     });
+    it("should return 0 quantity for any product", function () {
+      const product = new Product(1,
+        "paella",
+        30,
+        "Seafood Rice",
+        "lunch",
+        "url");
+      const quantity = this.basket.getItemQuantity(product);
+      expect(quantity).toEqual(0);
+    });
 
     describe("when add a product", function () {
       beforeEach(function () {

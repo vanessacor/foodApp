@@ -33,14 +33,48 @@ let products = [
     "breakfast",
     "https://source.unsplash.com/W9OKrxBqiZA/300x200"
   ),
+  new Product(
+    5,
+    "Veggie Pasta",
+    18,
+    "Pasta with roasted veggies",
+    "lunch",
+    "https://source.unsplash.com/C2vfoQmsTyg/300x200"
+  ),
+  new Product(
+    6,
+    "Tofu Curry",
+    20,
+    "Spicy indian tofu curry",
+    "lunch",
+    "https://source.unsplash.com/PqsImnjuElM/300x200"
+  ),
+  new Product(
+    7,
+    "Super Lunch",
+    25,
+    "Complete veggie lunch",
+    "lunch",
+    "https://source.unsplash.com/Y0Dc9lY0A3I/300x200"
+  ),
+  new Product(
+    8,
+    "Lentils Burger",
+    23,
+    "Lentils burger on a whole grain bun",
+    "lunch",
+    "https://source.unsplash.com/_TLKIVSW6Do/300x200"
+  ),
 ];
 
 function main() {
   const basket = new Basket();
+  
   const menuParent = document.querySelector(".restaurant-menu");
   const basketParent = document.querySelector(".basket")
   const basketUi = new BasketUi(basket,basketParent)
   const menuUi = new MenuUi(basket, menuParent, products, basketUi);
+  const menuOptions = new MenuOptions(menuUi);
 }
 
 window.addEventListener("load", main);
