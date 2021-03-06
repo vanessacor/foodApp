@@ -1,6 +1,6 @@
 
 .button-basket {
-    position: absolute;
+    position: fixed;
     bottom: 34px;
     left: 44%;
     z-index: 1;
@@ -17,7 +17,7 @@
   }
   
   .button-basket-show {
-    position: absolute;
+    position: fixed;
     bottom: 254px;
     z-index: 2;
     left: 44%;
